@@ -19,15 +19,15 @@ type MethodCallDelegate = delegate of int -> int
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-type IterationHelper(iterations, callback:MethodCallDelegate) as this =
+type IterationHelper(iterations, callback: _ -> int) as this =
     let iterationCount = iterations
     let methodCallback = callback
 
     do this.MethodCall(iterationCount, methodCallback)
     
-    member private this.MethodCall(iteration:int, cb:MethodCallDelegate) =
+    member private this.MethodCall(iteration:int, cb: _ -> int) =
         if iteration > 0 then 
-            cb.Invoke(1)
+            cb()
 
             let newIterationValue = iteration - 1
             this.MethodCall(newIterationValue, cb)

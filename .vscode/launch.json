@@ -5,7 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (console)",
+            "name": "comparison",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "buildComparison",
+            "program": "${workspaceFolder}/src/comparison/bin/Debug/netcoreapp3.1/comparison.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "CORE_ROOT": "/Users/jashoo/projects/runtime/artifacts/tests/coreclr/OSX.x64.Checked/Tests/Core_Root",
+                "START_LOCATION": "${workspaceFolder}/src/start/bin/Release/netcoreapp3.1/start.dll"
+            },
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "start.dll",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
@@ -15,7 +30,5 @@
             "stopAtEntry": false,
             "console": "internalConsole"
         }
-        
-
     ]
 }

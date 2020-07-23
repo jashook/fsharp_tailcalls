@@ -1,0 +1,53 @@
+[Fast tailcall decision]: Caller: System.Runtime.CompilerServices.CastHelpers:StelemRef(System.Array,int,System.Object)
+[Fast tailcall decision]: Callee: System.Runtime.CompilerServices.CastHelpers:WriteBarrier(byref,System.Object) -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: System.Runtime.CompilerServices.CastHelpers:StelemRef(System.Array,int,System.Object)
+[Fast tailcall decision]: Callee: System.Runtime.CompilerServices.CastHelpers:StelemRef_Helper(byref,long,System.Object) -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: System.Runtime.CompilerServices.CastHelpers:LdelemaRef(System.Array,int,long):byref
+[Fast tailcall decision]: Callee: System.Runtime.CompilerServices.CastHelpers:ThrowArrayMismatchException():byref -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: System.Text.EncodingHelper:GetCharset():System.String
+[Fast tailcall decision]: Callee: System.Globalization.TextInfo:ToLower(System.String):System.String:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Microsoft.FSharp.Core.PrintfModule:PrintFormatLineToTextWriter(System.IO.TextWriter,Microsoft.FSharp.Core.PrintfFormat`4[__Canon,__Canon,__Canon,__Canon]):System.__Canon
+[Fast tailcall decision]: Callee: Microsoft.FSharp.Core.PrintfModule:PrintFormatToTextWriterThen(Microsoft.FSharp.Core.FSharpFunc`2[__Canon,__Canon],System.IO.TextWriter,Microsoft.FSharp.Core.PrintfFormat`4[__Canon,__Canon,__Canon,__Canon]):System.__Canon -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Microsoft.FSharp.Core.PrintfModule:PrintFormatToTextWriterThen(Microsoft.FSharp.Core.FSharpFunc`2[__Canon,__Canon],System.IO.TextWriter,Microsoft.FSharp.Core.PrintfFormat`4[__Canon,__Canon,__Canon,__Canon]):System.__Canon
+[Fast tailcall decision]: Callee: Microsoft.FSharp.Core.FSharpFunc`2[__Canon,__Canon][System.__Canon,System.__Canon]:Invoke(System.__Canon):System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: PrintfBuilder`3[__Canon,__Canon,__Canon][System.__Canon,System.__Canon,System.__Canon]:parseFormatString(System.String,System.Type):System.Object:this
+[Fast tailcall decision]: Callee: System.Collections.Generic.Stack`1[__Canon][System.__Canon]:Pop():System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: PrintfBuilder`3[__Canon,__Canon,__Canon][System.__Canon,System.__Canon,System.__Canon]:parseFormatString(System.String,System.Type):System.Object:this
+[Fast tailcall decision]: Callee: PrintfBuilder`3[__Canon,__Canon,__Canon][System.__Canon,System.__Canon,System.__Canon]:buildPlain(int,System.__Canon):System.Object:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Microsoft.FSharp.Core.FSharpFunc`2[__Canon,Double][System.__Canon,System.Double]:InvokeFast(Microsoft.FSharp.Core.FSharpFunc`2[__Canon,__Canon],System.__Canon,double):System.__Canon
+[Fast tailcall decision]: Callee: FSharpFunc`3[__Canon,Double,__Canon][System.__Canon,System.Double,System.__Canon]:Invoke(System.__Canon,double):System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Microsoft.FSharp.Core.FSharpFunc`2[__Canon,Double][System.__Canon,System.Double]:InvokeFast(Microsoft.FSharp.Core.FSharpFunc`2[__Canon,__Canon],System.__Canon,double):System.__Canon
+[Fast tailcall decision]: Callee: Microsoft.FSharp.Core.FSharpFunc`2[Double,__Canon][System.Double,System.__Canon]:Invoke(double):System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Start@63-1:Invoke(double):Microsoft.FSharp.Core.Unit:this
+[Fast tailcall decis[FirstMethod] - 179.464000ms
+[SecondMethod] - 435.356000ms
+ion]: Callee: Microsoft.FSharp.Core.FSharpFunc`2[Double,__Canon][System.Double,System.__Canon]:Invoke(double):System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Invoke@2686[Double,__Canon,__Canon][System.Double,System.__Canon,System.__Canon]:Invoke(double):System.__Canon:this
+[Fast tailcall decision]: Callee: FSharpFunc`3[__Canon,Double,__Canon][System.__Canon,System.Double,System.__Canon]:Invoke(System.__Canon,double):System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Invoke@2699-1[__Canon,Double,__Canon,__Canon][System.__Canon,System.Double,System.__Canon,System.__Canon]:Invoke(System.__Canon,double):System.__Canon:this
+[Fast tailcall decision]: Callee: FSharpFunc`4[__Canon,__Canon,Double,__Canon][System.__Canon,System.__Canon,System.Double,System.__Canon]:Invoke(System.__Canon,System.__Canon,double):System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Final2@271[__Canon,__Canon,__Canon,__Canon,Double][System.__Canon,System.__Canon,System.__Canon,System.__Canon,System.Double]:Invoke(Microsoft.FSharp.Core.FSharpFunc`2[__Canon,__Canon],System.__Canon,double):System.__Canon:this
+[Fast tailcall decision]: Callee: PrintfEnv`3[__Canon,__Canon,__Canon][System.__Canon,System.__Canon,System.__Canon]:Finish():System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: TextWriterPrintfEnv`1[__Canon][System.__Canon]:Write(System.String):this
+[Fast tailcall decision]: Callee: System.IO.TextWriter:Write(System.String):this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: TextWriterPrintfEnv`1[__Canon][System.__Canon]:Finish():System.__Canon:this
+[Fast tailcall decision]: Callee: Microsoft.FSharp.Core.FSharpFunc`2[__Canon,__Canon][System.__Canon,System.__Canon]:Invoke(System.__Canon):System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
+[Fast tailcall decision]: Caller: Start@71-3:Invoke(double):Microsoft.FSharp.Core.Unit:this
+[Fast tailcall decision]: Callee: Microsoft.FSharp.Core.FSharpFunc`2[Double,__Canon][System.Double,System.__Canon]:Invoke(double):System.__Canon:this -- Decision: Will fast tailcall (CallerArgStackSize: 0, CalleeArgStackSize: 0)
+
